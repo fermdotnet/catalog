@@ -1,23 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-function MyProfile(){
-    return (
-        <div>Mi perfil ...</div>
-    );
-}
-
-function Catalog(){
-    return (
-        <div>Catálogo ...</div>
-    );
-}
-
-function Product(){
-    return (
-        <div>Producto ...</div>
-    );
-}
+import MyProfile from './pages/myProfile';
+import Catalog from './pages/catalog';
+import Product from './pages/product';
 
 export default function App() {
     return (
