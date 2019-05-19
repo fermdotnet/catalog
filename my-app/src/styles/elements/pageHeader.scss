@@ -1,0 +1,22 @@
+.page-header{
+  float: left;
+  width: 100%;
+  height: 412px;
+  background-color: $primary;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 $unit*2.5 $unit*2.5;
+
+  > .content{
+    width: 100%;
+    max-width: $content-max;
+
+    h1{
+      margin: 0;
+      font-size: 64px;
+      color: #FFF;
+      font-weight: 700;
+    }
+  }
+}

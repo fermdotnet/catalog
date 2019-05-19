@@ -1,0 +1,41 @@
+header{
+  background-color: $header;
+  position: fixed;
+  height: $header-footer-height;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  padding: 0 2.5rem;
+  justify-content: space-between;
+  align-items: center;
+
+  .my-profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+
+    .name{
+      margin-right: $unit*.75;
+    }
+
+    .points{
+      height: 48px;
+      background-color: #EEE;
+      border-radius: 100px;
+      padding: 0 13px;
+      display: flex;
+      align-items: center;
+
+      &::after{
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url(/assets/images/coin.svg) no-repeat 1px 1px / cover;
+        margin-left: $unit*.25;
+      }
+    }
+  }
+}

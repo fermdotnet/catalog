@@ -1,0 +1,15 @@
+footer{
+  float: left;
+  width: 100%;
+  line-height: $header-footer-height;
+  padding: 0 $unit*2.5;
+  text-align: center;
+
+  &::before{
+    content: '';
+    float: left;
+    width: 100%;
+    height: 1px;
+    background-color: #DDD;
+  }
+}

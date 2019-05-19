@@ -5,14 +5,14 @@ export default function Header(){
     return (
         <header>
 
-            <ul>
-                <li>
-                    <Link to="/">Inicio</Link>
-                </li>
-                <li>
-                    <Link to="/my-profile">Mi Perfil</Link>
-                </li>
-            </ul>
+            <Link to="/">
+                <img src="/assets/images/aerolab.svg" />
+            </Link>
+
+            <Link className="my-profile" to="/my-profile">
+                <span className="name">John Kite</span>
+                <div className="points">6000</div>
+            </Link>
 
         </header>
     );
