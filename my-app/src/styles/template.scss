@@ -40,6 +40,10 @@ input[type="button"]{
   padding: 0;
 }
 
+button{
+  cursor: pointer;
+}
+
 #root{
   display: flex;
   flex-flow: column;

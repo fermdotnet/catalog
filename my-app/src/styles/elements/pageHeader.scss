@@ -2,7 +2,7 @@
   float: left;
   width: 100%;
   height: 412px;
-  background-color: $primary;
+  background: $primary url(/assets/images/header.png) bottom right / cover;
   display: flex;
   align-items: flex-end;
   justify-content: center;

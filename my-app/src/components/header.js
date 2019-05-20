@@ -1,19 +1,33 @@
-import React from "react";
+import React, {Component} from "react";
+import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
-export default function Header(){
-    return (
-        <header>
+class Header extends Component {
 
-            <Link to="/">
-                <img src="/assets/images/aerolab.svg" />
-            </Link>
+    render(){
+        return (
+            <header>
 
-            <Link className="my-profile" to="/my-profile">
-                <span className="name">John Kite</span>
-                <div className="points">6000</div>
-            </Link>
+                <Link to="/">
+                    <img src="/assets/images/aerolab.svg" alt="aerolab" />
+                </Link>
 
-        </header>
-    );
+                {this.props.userData && (
+                    <Link className="my-profile" to="/my-profile">
+                        <span className="name">{this.props.userData.name}</span>
+                        <div className="points">{this.props.userData.points}</div>
+                    </Link>
+                )}
+
+            </header>
+        );
+    }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        userData: state.user.userData
+    };
+};
+
+export default connect(mapStateToProps)(Header);

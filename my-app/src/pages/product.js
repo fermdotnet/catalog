@@ -1,16 +1,22 @@
-import React from "react";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PageHeader from '../components/pageHeader';
 
-export default function Product(){
-    return (
-        <div>
+class Product extends Component {
 
-            <PageHeader title='Producto' />
+    render(){
+        return (
+            <div className="product-page">
 
-            <div className="page-content">
-                Producto ...
+                <PageHeader title='Producto' />
+
+                <div className="page-content">
+                    Producto ...
+                </div>
+
             </div>
-
-        </div>
-    );
+        );
+    }
 }
+
+export default connect()(Product);

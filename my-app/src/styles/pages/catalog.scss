@@ -1,0 +1,96 @@
+.catalog-page{
+
+  .paginator-header,
+  .paginator-footer{
+    width: 100%;
+    float: left;
+    display: flex;
+
+    .count{
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      font-size: 21px;
+      color: $gray-dark;
+      letter-spacing: -0.15px;
+    }
+  }
+
+  .paginator-header{
+    border-bottom: 1px $gray-light solid;
+    padding-bottom: $unit*1.5;
+    margin-bottom: $unit*1.5;
+
+    .sort{
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+
+      span{
+        font-size: 21px;
+        color: $gray;
+        letter-spacing: -0.15px;
+        margin-right: $unit*.5;
+      }
+
+      button{
+        background: $gray-light;
+        color: $gray-dark;
+        border-radius: 100px;
+        border: none;
+        height: 48px;
+        padding: 0 $unit*1.5;
+        margin-left: $unit*1;
+        font-size: 21px;
+        transition: $transition;
+
+        &.selected{
+          background: $primary;
+          color: #FFF;
+        }
+      }
+    }
+
+    .count{
+      border-right: 1px $gray-light solid;
+      padding-right: $unit*1.5;
+      margin-right: $unit*1.5;
+    }
+  }
+
+  .paginator-footer{
+    margin: $unit*2 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .arrows{
+      display: flex;
+      flex-direction: row;
+
+      > :last-child{
+        margin-left: $unit*.75;
+      }
+
+      svg{
+        cursor: pointer;
+
+        fill,
+        polygon{
+          transition: $transition;
+        }
+
+        &:hover{
+
+          circle{
+            fill: $gray-dark;
+          }
+
+          polygon{
+            fill: #FFF;
+          }
+        }
+      }
+    }
+  }
+}

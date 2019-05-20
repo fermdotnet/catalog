@@ -8,3 +8,6 @@ $primary: #0ad4fa;
 $gray-dark: #616161;
 $gray: #a3a3a3;
 $gray-light: #d9d9d9;
+
+$transition: all .25s cubic-bezier(.39,.58,.57,1);
+$transition-large: all .75s cubic-bezier(.39,.58,.57,1);
